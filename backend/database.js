@@ -3,7 +3,7 @@ require('dotenv').config()
 
 mongoose.connect(process.env.MONGO_URL,{
     dbName:process.env.DB_NAME,
-    serverSelectionTimeoutMS: 30000,
+    serverSelectionTimeoutMS: 30000,git 
 }).then(
     ()=>{
         console.log('Connected to database')
