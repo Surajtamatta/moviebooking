@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,16 +10,31 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@meinefinsternis/react-horizontal-date-picker": "^1.0.1",
+    "antd": "^5.19.0",
+    "chart.js": "^4.4.3",
+    "dayjs": "^1.11.11",
+    "moment": "^2.30.1",
+    "next": "14.2.4",
+    "next-transpile-modules": "^10.0.1",
     "react": "^18",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "react-hook-form": "^7.52.1",
+    "react-icons": "^5.2.1",
+    "react-infinite-scroll-component": "^6.1.0",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.1.4",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/moment": "^2.13.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "eslint-config-next": "14.2.4",
+    "typescript": "^5"
   }
 }
