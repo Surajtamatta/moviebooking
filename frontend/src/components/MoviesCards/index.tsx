@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { useRef } from 'react'
 import { CelebrityCardType } from '@/MOCK_DATA';
 import { useRouter } from 'next/navigation';
 import CardComponent from '../Cards';
 import { Rating,Content,Container, MetaData} from '@/styles/components/MoviesCards';
 import { Row, Typography } from 'antd';
-
+import Image from 'next/image';
 
 
 const MoviesCards = (data:CelebrityCardType) => {
@@ -12,6 +13,7 @@ const MoviesCards = (data:CelebrityCardType) => {
     const router = useRouter()
     const city = 'mumbai'
     const { _id, name, rating, imageUrl, types} = data;
+    const imagesrc:string = data.imageUrl as string;
   return (
     
     <Row 
@@ -20,9 +22,9 @@ const MoviesCards = (data:CelebrityCardType) => {
         <CardComponent
             cover={
                 <Content>
-                    <img
+                    <Image
                     alt="example" 
-                    src={imageUrl} 
+                    src={imagesrc} 
                     style={{
                         width: '100%',
                         height: '100%',

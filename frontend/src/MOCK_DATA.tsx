@@ -15,7 +15,7 @@ export interface moviesTypes{
 export interface CelebrityCardType{
     _id?: number;
     name?: string;
-    imageUrl?: string;
+    imageUrl?:string;
     rating?:string;
     role?: string;
     types?:string;

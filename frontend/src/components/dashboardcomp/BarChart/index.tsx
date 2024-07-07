@@ -12,7 +12,7 @@ import {
   LineChart
 } from "@/styles/dashcomp/LineChart";
 import {mockLineData} from '../RecentList/mockData';
-
+import { ChartOptions } from 'chart.js';
 ChartJS.register(
   LineElement,
   LineController,
@@ -59,47 +59,48 @@ const BarCharts = () => {
       tension: 0.1
     }]
   };
-const options={
-  maintainAspectRatio: false,
-  scales: {
-    y: {
-      min:0,
-      max:100000,
-      beginAtZero: true,
-      ticks: {
-        stepSize: 100, 
-      },
-      title: {
-        display: true,
-        text: 'Revenue in USD',
-        font: {
-          size: 12,
-          weight: 'bold',
-        },
-      },
-    },
-    x: {
-      ticks: {
-        stepSize: 100, 
-      },
-      title: {
-        display: true,
-        text: 'Month',
-        font: {
-          size: 12,
-          weight: 'bold',
-        },
-      },
-    },
-  },
-  plugins: {
-    legend: {
-      display: false,
-    },
-  },
-  
-  }
+ 
 
+  const options: ChartOptions<'bar'> = {
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        min: 0,
+        max: 100000,
+        beginAtZero: true,
+        ticks: {
+          stepSize: 100,
+        },
+        title: {
+          display: true,
+          text: 'Revenue in USD',
+          font: {
+            size: 12,
+            weight: 'bold',
+          },
+        },
+      },
+      x: {
+        ticks: {
+          stepSize: 1,
+        },
+        title: {
+          display: true,
+          text: 'Month',
+          font: {
+            size: 12,
+            weight: 'bold',
+          },
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  };
+  
 
 
   return (

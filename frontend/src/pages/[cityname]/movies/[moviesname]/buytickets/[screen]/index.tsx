@@ -2,7 +2,7 @@ import CardComponent from '@/components/Cards'
 import { SeatButton } from '@/styles/pages/[screen]'
 import { Divider, Space, Tag, Typography } from 'antd'
 import React, { useState } from 'react'
-import { Price } from '../../../../../../../../../paradox/robotics_frontend/src/styles/Home/CoursesNewsCard/index';
+
 
 const data = {
     name: 'Jawan',
@@ -3822,7 +3822,7 @@ const renderSeats = () => {
                   <Space key={colIndex}>
                     <Divider type='vertical' />
                     {col.seats.map((seat: any, seatIndex: number) => (
-                      <Space>
+                      <Space  key={seatIndex}>
                         <Tag
                         color={
                           selectedSeat.find((s: any) => (

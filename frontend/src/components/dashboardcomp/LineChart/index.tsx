@@ -11,6 +11,7 @@ import {
   LineChart
 } from "@/styles/dashcomp/LineChart";
 import {mockLineData} from '../RecentList/mockData';
+import { ChartOptions } from 'chart.js';
 
 ChartJS.register(
   LineElement,
@@ -38,53 +39,59 @@ const LineCharts = () => {
       tension: 0.1
     }]
   };
-const options={
-  maintainAspectRatio: false,
-  scales: {
-    y: {
-      min:0,
-      max:100000,
-      beginAtZero: true,
-      ticks: {
-        stepSize: 100, 
-      },
-      title: {
-        display: true,
-        text: 'Revenue in USD',
-        font: {
-          size: 12,
-          weight: 'bold',
-        },
-      },
-    },
-    x: {
-      ticks: {
-        stepSize: 100, 
-      },
-      title: {
-        display: true,
-        text: 'Month',
-        font: {
-          size: 12,
-          weight: 'bold',
-        },
-      },
-    },
-  },
-  plugins: {
-    legend: {
-      display: true,
- //    position:'bottom',
-      labels: {
-        font: {
-          size: 14,
-        },
-      },
-    },
-  },
-  
-  }
 
+  const options: ChartOptions<'line'> = {
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        min: 0,
+        max: 100000,
+        beginAtZero: true,
+        ticks: {
+          stepSize: 100,
+          font: {
+            size: 12,
+            weight: 'bold',
+          },
+        },
+        title: {
+          display: true,
+          text: 'Revenue in USD',
+          font: {
+            size: 12,
+            weight: 'bold',
+          },
+        },
+      },
+      x: {
+        ticks: {
+          stepSize: 1, // Adjust as needed
+          font: {
+            size: 12,
+            weight: 'bold',
+          },
+        },
+        title: {
+          display: true,
+          text: 'Month',
+          font: {
+            size: 12,
+            weight: 'bold',
+          },
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
+        labels: {
+          font: {
+            size: 14,
+          },
+        },
+      },
+    },
+  };
 
 
   return (

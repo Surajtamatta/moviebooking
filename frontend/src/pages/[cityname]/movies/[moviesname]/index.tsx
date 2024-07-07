@@ -5,7 +5,6 @@ import { Divider, Space,Typography } from 'antd';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import React from 'react'
-import { CounterWrap } from '../../../../../../../paradox/robotics_frontend/src/styles/Membership/Main/index';
 import MoviesCarousal from '@/components/MoviesCarousel';
 import { moviedata } from '@/MOCK_DATA';
 import MoviesCrews from '@/components/MoviesCrews';
@@ -81,7 +80,7 @@ const MoviesPage = () => {
             Share
         </WrapperShare>
        <Space>
-            <Image src={`${data.portraitImgUrl}`}/>
+            <Image alt={'portraiturl'} src={`${data.portraitImgUrl}`}/>
         </Space>
         <Space direction="vertical">
           <Title  >{data.title}</Title>

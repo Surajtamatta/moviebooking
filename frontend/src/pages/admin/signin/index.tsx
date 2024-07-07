@@ -1,7 +1,7 @@
 
 import React, { useContext } from 'react';
 import { MainContainer, Wrapper, Content, WelcomeText, Form, InputContainer, Input, Errors, ButtonContainer, Button, TextContent, Text, LoginWith, HorizontalRule, LinksContainer, Social, Links, ForgotPassword } from '@/styles/components/signin';
-import { LoginData } from "./LoginData";
+import { LoginData } from "@/components/signin/LoginData";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from '@/utils/validation/signin';

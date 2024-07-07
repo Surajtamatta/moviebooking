@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
 import {
   MenuFoldOutlined,
@@ -132,7 +133,7 @@ const Navbar: React.FC<NavbarProps> = ({ collapsed, setCollapsed }) => {
             <Content>
               <Space>
                 <Typography.Title level={4} style={{ margin: 0, display: 'flex', alignItems: 'center', gap: 10 }}>
-                  My <img src={'https://www.freeiconspng.com/uploads/download-ticket-ticket-free-entertainment-icon-orange-ticket-design-0.png'} width={50} /> Show
+                  My <img alt={'logo'} src={'https://www.freeiconspng.com/uploads/download-ticket-ticket-free-entertainment-icon-orange-ticket-design-0.png'} width={50} /> Show
                 </Typography.Title>
               </Space>
               <InputComponent

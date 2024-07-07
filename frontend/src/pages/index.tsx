@@ -1,7 +1,7 @@
 import SliderBanner from '@/components/Carousel';
 import { Container } from '@/styles/Home/Main';
 import { moviedata } from '@/MOCK_DATA';
-import { Wrapper, Image } from '@/styles/components/Slider';
+import { Wrapper, Img } from '@/styles/components/Slider';
 import MoviesCarousal from '@/components/MoviesCarousel';
 import { useAdminAuth } from '@/utils/context/AdminAuth';
 
@@ -19,7 +19,7 @@ export default function Home() {
           <SliderBanner>
             {moviedata.map((item, index) => (
               <Wrapper key={index}>
-                <Image src={item.imageUrl || 'fallback-image-url'} />
+                <Img srcs={item.imageUrl || 'fallback-image-url'} />
               </Wrapper>
             ))}
           </SliderBanner>

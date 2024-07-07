@@ -30,8 +30,8 @@ export const Wrapper = styled.div`
   transition: transform 0.5s ease-in-out;
 
 `;
-export const Image = styled.div<{src:string}>`
-   background-image: url(${props => props.src}) ;
+export const Img = styled.div<{srcs:string}>`
+  background-image: url(${props => props.srcs}) ;
   background-size: cover;
   border-radius: 10px; 
   height: 100%;

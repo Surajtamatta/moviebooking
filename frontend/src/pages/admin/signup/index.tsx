@@ -19,7 +19,7 @@ import {
   Inputwrapper,
   BackButton,
 } from '@/styles/components/signup';
-import { LoginData } from '../signin/LoginData';
+import { LoginData } from '@/components/signin/LoginData';
 import {  useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from '@/utils/validation/signup';

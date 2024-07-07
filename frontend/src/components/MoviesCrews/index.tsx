@@ -17,8 +17,8 @@ const MoviesCrews = ({data}:any) => {
         <CardComponent>
             <Divider />
             <Space style={{gap:20}}>
-                { data.cast.map((data:any)=>(
-                    <Space direction="vertical" >
+                { data.cast.map((data:any,index:any)=>(
+                    <Space direction="vertical"  key={index}>
                         <Profile src={data?.imageUrl}></Profile>
                         <Space direction="vertical" style={{gap:0,width:'100%'}}>
                         <Typography.Title level={5}  style={{margin:0,textAlign:'center'}}>{data.name}</Typography.Title>
@@ -34,8 +34,8 @@ const MoviesCrews = ({data}:any) => {
             
             <Divider/>
             <Space style={{gap:20}}>
-                { data.crew.map((data:any)=>(
-                    <Space direction="vertical" >
+                { data.crew.map((data:any,index:any)=>(
+                    <Space direction="vertical" key={index}>
                         <Profile src={data?.imageUrl}></Profile>
                         <Space direction="vertical" style={{gap:0,width:'100%'}}>
                         <Typography.Title level={5}  style={{margin:0,textAlign:'center'}}>{data.name}</Typography.Title>
